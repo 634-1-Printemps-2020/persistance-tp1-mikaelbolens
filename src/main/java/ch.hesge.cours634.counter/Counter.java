@@ -3,7 +3,7 @@ import exception.CounterException;
 
 public class Counter implements ICounter {
 
-    protected int counter;
+    private int counter;
 
     public Counter() {
         this.counter = 0;
@@ -28,5 +28,5 @@ public class Counter implements ICounter {
         return counter;
     }
 
-    protected void setVal(int val){this.counter = val;}
+    public void setVal(int val){this.counter = val;}
 }

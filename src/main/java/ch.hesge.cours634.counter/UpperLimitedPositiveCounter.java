@@ -4,13 +4,13 @@ import exception.CounterException;
 
 public class UpperLimitedPositiveCounter extends Counter {
     private int valMax;
-    private int valMin;
+    private int valueMin;
 
-    public UpperLimitedPositiveCounter(int valMin, int valMax) throws CounterException{
+    public UpperLimitedPositiveCounter(int valueMin, int valMax) throws CounterException{
         super();
-        if (valMin >= 0){
-            super.setVal(valMin);
-            this.valMin = valMin;
+        if (valueMin >= 0){
+            super.setVal(valueMin);
+            this.valueMin = valueMin;
             this.valMax = valMax;
         }
         else {
@@ -20,19 +20,19 @@ public class UpperLimitedPositiveCounter extends Counter {
     }
     public UpperLimitedPositiveCounter(int valMax) {
         super();
-        this.valMin = 0;
+        this.valueMin = 0;
         this.valMax = valMax;
     }
     public UpperLimitedPositiveCounter() {
         super();
-        this.valMin = 0;
+        this.valueMin = 0;
         this.valMax = 10;
     }
 
     @Override
     public void inc() throws CounterException {
-        if (super.getValue() < valMax){
-        super.counter += 1;}
+        if (getValue() < valMax){
+        super.inc();}
         else {
             throw new CounterException("val max dépassé");
         }

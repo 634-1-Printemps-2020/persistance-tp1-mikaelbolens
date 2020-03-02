@@ -2,7 +2,6 @@ package ch.hesge.cours634.counter;
 import exception.CounterException;
 
 public class Main {
-
     public static void main(String[] args) throws CounterException {
         System.out.println("Hello World!");
 
